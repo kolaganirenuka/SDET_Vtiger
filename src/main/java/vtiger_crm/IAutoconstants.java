@@ -1,4 +1,4 @@
-package com_vtger_framework;
+package vtiger_crm;
 
 public interface IAutoconstants {
 	String dirpath=System.getProperty("user.dir");
