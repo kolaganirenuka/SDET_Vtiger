@@ -23,7 +23,7 @@ public class Orginfopage {
 		return createorgimg;
 	}
 	
-	public WebElement getSearchtxtbox() {
+	public  WebElement getSearchtxtbox() {
 		return searchtxtbox;
 	}
 

@@ -1,72 +1,47 @@
 package vtiger_Test_data;
 
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import com.vtiger.objectrepo.Createorgpage;
 import com.vtiger.objectrepo.Homepage;
-import com.vtiger.objectrepo.Loginpage;
 import com.vtiger.objectrepo.Orginfopage;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import vtiger_crm.FileUtils;
-import vtiger_crm.JavaUtil;
-import vtiger_crm.WebDriverUtilities;
+import vtiger_crm.Base_Class;
+import vtiger_crm.IAutoconstants;
 
-public class TC02_create_org {
-	public static void main(String[] args) throws Throwable {
-		FileUtils futil=new FileUtils();
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver;
-		String browser = futil.readdataprop("Browser");	
-		if(browser.equalsIgnoreCase("chrome")) {
-			driver =new ChromeDriver();
-		}
-		else if (browser.equalsIgnoreCase("firefox")){
+public class TC02_create_org extends Base_Class{
+	@Test
 
-			driver =new FirefoxDriver();
-		}
-		else {
-			driver= new EdgeDriver();
-		}
-		WebDriverUtilities webutil=new WebDriverUtilities();
-		webutil.pageloadtimeouts(driver);
-		driver.get(futil.readdataprop("Url"));
-		Loginpage loginpage=new Loginpage(driver);
-		loginpage.getUsertxtbox().sendKeys(futil.readdataprop("UN"));
-		loginpage.getPwdtxtbox().sendKeys(futil.readdataprop("PW"));
-		loginpage.getLoginbtn().click();
+	public void create_org_ddd() throws Throwable {
 		Homepage homepage=new Homepage(driver);
 		homepage.getOrglink().click();
 		Orginfopage orginfopage=new Orginfopage(driver);
 		orginfopage.getCreateorgimg().click();
-		Thread.sleep(3000);
-		JavaUtil jv=new JavaUtil();
-		String orgname = jv.fakecompanyName();
-		Createorgpage createorgpage=new Createorgpage(driver);
-		createorgpage.getOrgname().sendKeys(orgname);		
-		WebElement ele = createorgpage.getOrginddd();
-		webutil.selectfromdd(ele, "Hospitality");
-		WebElement ele1 = createorgpage.getOrgratdd();
-		webutil.selectfromdd(ele1, "Active");
-		WebElement ele3 = createorgpage.getOrgacdd();
-		webutil.selectfromdd(ele3, "Integrator");
-		createorgpage.getOrgsavebtn().click();
-		Thread.sleep(3000);
+		FileInputStream fisexcel = new FileInputStream(IAutoconstants.excelpath);
+		int randomnumber = jv.generateRandomNumber();
+
+		String orgnameexcel=WorkbookFactory.create(fisexcel).getSheet("Sheet1").getRow(2).getCell(0).getStringCellValue();
+		String	orgname1=orgnameexcel+randomnumber;
+		Createorgpage createorg=new Createorgpage(driver);
+		createorg.getOrgname().sendKeys(orgname1);
+		webutil.selectfromdd(createorg.getOrginddd(), "Banking");
+		webutil.selectfromdd(createorg.getOrgratdd(), "Acquired");
+		webutil.selectfromdd(createorg.getOrgacdd(), "Analyst");
+
+		createorg.getOrgsavebtn().click();
+		Thread.sleep(2000);
 		homepage.getOrglink().click();
-		Thread.sleep(3000);
-		orginfopage.getSearchtxtbox().sendKeys(orgname);
-		WebElement dds = orginfopage.getOrgtypesdd();
-		webutil.selectfromdd(dds, "accountname");
+		orginfopage.getSearchtxtbox().sendKeys(orgname1);
+		webutil.selectfromdd(orginfopage.getOrgtypesdd(), "accountname");
 		orginfopage.getSearchorgbtn().click();
 		Thread.sleep(3000);
 		String value = driver.findElement(By.xpath("//a[@title='Organizations']")).getText();
 		System.out.println(value);
-		if(value.equals(orgname))
+		if(value.equals(orgname1))
 		{
 			System.out.println("TC PASS");
 		}
@@ -74,11 +49,7 @@ public class TC02_create_org {
 		{
 			System.out.println("TC FAIL");
 		}
-		WebElement signoutimg = homepage.getSignoutimg();
 
-		webutil.actionelement(driver, signoutimg);
-
-		homepage.getSignoutlink().click();
 	}
 
 }

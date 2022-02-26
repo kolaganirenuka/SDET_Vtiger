@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="12" total="15" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-02-26T15:51:51 IST" name="Suite" finished-at="2022-02-26T15:53:53 IST" duration-ms="121309">
+    <groups>
+    </groups>
+    <test started-at="2022-02-26T15:51:51 IST" name="Test" finished-at="2022-02-26T15:53:53 IST" duration-ms="121309">
+      <class name="vtiger_Test_data.TC02_create_org">
+        <test-method is-config="true" signature="launchbrowser_driver_Initilize()[pri:0, instance:vtiger_Test_data.TC02_create_org@27f981c6]" started-at="2022-02-26T15:51:51 IST" name="launchbrowser_driver_Initilize" finished-at="2022-02-26T15:51:54 IST" duration-ms="3039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser_driver_Initilize -->
+        <test-method is-config="true" signature="logintoApp()[pri:0, instance:vtiger_Test_data.TC02_create_org@27f981c6]" started-at="2022-02-26T15:51:54 IST" name="logintoApp" finished-at="2022-02-26T15:51:58 IST" duration-ms="3210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintoApp -->
+        <test-method signature="create_org_ddd()[pri:0, instance:vtiger_Test_data.TC02_create_org@27f981c6]" started-at="2022-02-26T15:51:58 IST" name="create_org_ddd" finished-at="2022-02-26T15:52:15 IST" duration-ms="17772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_org_ddd -->
+        <test-method is-config="true" signature="logoutFromApp()[pri:0, instance:vtiger_Test_data.TC02_create_org@27f981c6]" started-at="2022-02-26T15:52:15 IST" name="logoutFromApp" finished-at="2022-02-26T15:52:17 IST" duration-ms="1903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:vtiger_Test_data.TC02_create_org@27f981c6]" started-at="2022-02-26T15:52:17 IST" name="tearDown" finished-at="2022-02-26T15:52:27 IST" duration-ms="10136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- vtiger_Test_data.TC02_create_org -->
+      <class name="vtiger_crm.Base_Class">
+        <test-method is-config="true" signature="makeConnections()[pri:0, instance:vtiger_crm.Base_Class@23c30a20]" started-at="2022-02-26T15:51:51 IST" name="makeConnections" finished-at="2022-02-26T15:51:51 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makeConnections -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:vtiger_crm.Base_Class@23c30a20]" started-at="2022-02-26T15:51:51 IST" name="beforeTest" finished-at="2022-02-26T15:51:51 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:vtiger_crm.Base_Class@23c30a20]" started-at="2022-02-26T15:53:53 IST" name="aftertest" finished-at="2022-02-26T15:53:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:vtiger_crm.Base_Class@23c30a20]" started-at="2022-02-26T15:53:53 IST" name="aftersuite" finished-at="2022-02-26T15:53:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftersuite -->
+      </class> <!-- vtiger_crm.Base_Class -->
+      <class name="vtiger_Test_data.Tc001_create_org">
+        <test-method is-config="true" signature="launchbrowser_driver_Initilize()[pri:0, instance:vtiger_Test_data.Tc001_create_org@1b11171f]" started-at="2022-02-26T15:52:27 IST" name="launchbrowser_driver_Initilize" finished-at="2022-02-26T15:52:29 IST" duration-ms="1973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser_driver_Initilize -->
+        <test-method is-config="true" signature="logintoApp()[pri:0, instance:vtiger_Test_data.Tc001_create_org@1b11171f]" started-at="2022-02-26T15:52:29 IST" name="logintoApp" finished-at="2022-02-26T15:52:33 IST" duration-ms="3326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintoApp -->
+        <test-method signature="create_org()[pri:0, instance:vtiger_Test_data.Tc001_create_org@1b11171f]" started-at="2022-02-26T15:52:33 IST" name="create_org" finished-at="2022-02-26T15:52:53 IST" duration-ms="19993" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_org -->
+        <test-method is-config="true" signature="logoutFromApp()[pri:0, instance:vtiger_Test_data.Tc001_create_org@1b11171f]" started-at="2022-02-26T15:52:53 IST" name="logoutFromApp" finished-at="2022-02-26T15:52:55 IST" duration-ms="1914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:vtiger_Test_data.Tc001_create_org@1b11171f]" started-at="2022-02-26T15:52:55 IST" name="tearDown" finished-at="2022-02-26T15:53:05 IST" duration-ms="10131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- vtiger_Test_data.Tc001_create_org -->
+      <class name="vtiger_Test_data.TC03_create_contact">
+        <test-method is-config="true" signature="launchbrowser_driver_Initilize()[pri:0, instance:vtiger_Test_data.TC03_create_contact@1151e434]" started-at="2022-02-26T15:53:05 IST" name="launchbrowser_driver_Initilize" finished-at="2022-02-26T15:53:07 IST" duration-ms="2035" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser_driver_Initilize -->
+        <test-method is-config="true" signature="logintoApp()[pri:0, instance:vtiger_Test_data.TC03_create_contact@1151e434]" started-at="2022-02-26T15:53:07 IST" name="logintoApp" finished-at="2022-02-26T15:53:10 IST" duration-ms="3325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintoApp -->
+        <test-method signature="create_cont()[pri:0, instance:vtiger_Test_data.TC03_create_contact@1151e434]" started-at="2022-02-26T15:53:10 IST" name="create_cont" finished-at="2022-02-26T15:53:41 IST" duration-ms="30471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_cont -->
+        <test-method is-config="true" signature="logoutFromApp()[pri:0, instance:vtiger_Test_data.TC03_create_contact@1151e434]" started-at="2022-02-26T15:53:41 IST" name="logoutFromApp" finished-at="2022-02-26T15:53:42 IST" duration-ms="1903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:vtiger_Test_data.TC03_create_contact@1151e434]" started-at="2022-02-26T15:53:42 IST" name="tearDown" finished-at="2022-02-26T15:53:53 IST" duration-ms="10125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- vtiger_Test_data.TC03_create_contact -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
